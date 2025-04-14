@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0c3b2e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Active Link Styling */
+header nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+header nav ul li a:hover {
+    color: #ffba00;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #6d9773;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    min-height: 80vh;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ffba00;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* Slideshow Styles */
+.art-slideshow {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 500px;   /* Set the fixed width */
+    height: 500px;  /* Set the fixed height */
+    margin: auto;
+    overflow: hidden; /* Hide any overflowed content */
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;   /* Ensure the image fills the width */
+    height: 100%;  /* Ensure the image fills the height */
+    object-fit: cover; /* Makes sure the image fills the box without distortion */
+    border-radius: 10px; /* Optional, for rounded corners */
+}
+
+@media (max-width: 768px) {
+    .caption {
+        font-size: 1.2rem;
+    }
+}
+
+/* Join Us Section */
+.join {
+    background-color: #6d9773;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.join h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.join p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+
+    .about p,
+    .join p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* adds spacing between stacked elements */
+    }
+    
+    .hero-image img {
+        width: 150px;       /* a little smaller for tighter screens */
+        height: auto;
+        margin-top: 20px;   /* creates breathing room */
+    }
+    .slideshow-container {
+        width: 300px;
+        height: 300px;
+    }
+}

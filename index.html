@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Tone Art - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop-styles.css">
+ <style>
+        /* Make sure this is in your CSS file or inside <style> in <head> */
+        /* Slideshow Styles */
+        .art-slideshow {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none; /* Hide all slides initially */
+            width: 100%; /* Ensure the image is full width */
+            max-height: 500px; /* Optional: Set a max height */
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Ensure images are styled */
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body onload="showSlides()"> <!-- Ensures the slideshow starts when the page loads -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">2Tone Art</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (Your image + Bio) -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>2Tone</h1>
+                    <p>Adventurer of Land and Sea. Creator of Tiny Worlds to get lost in. I let my art whisper where the ordinary world fails. Bend the rules and use more color! This is where I express myself. It's okay to be misunderstood. It's okay to be... Uninique.</p>
+                    <a href="shop.html" class="cta-button">Explore the Shop</a>
+                </div>
+                <div class="hero-image">
+                    <img src="donepfp.jpg" alt="Picture of [Your Name]">
+                </div>
+            </div>
+        </section>
+
+        <!-- Art Slideshow Section -->
+        <section class="art-slideshow">
+            <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="mySlides fade">
+                    <img src="snailsky.png" alt="Art 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="believewn.png" alt="Art 2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="basezora.png" alt="Art 3">
+                </div>
+                <div class="mySlides fade">
+                    <img src="bll.png" alt="Art 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section class="join">
+            <h2>Join the 2Tone Art Community</h2>
+            <p>Stay updated with new art releases, events, and exclusive offers. Join our community of like-minded individuals who appreciate art in its purest form.</p>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 2Tone Art</p>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            // Hide all slides initially
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            // Increment slideIndex
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1; // Reset to first slide
+            }
+            slides[slideIndex - 1].style.display = "block"; // Show the current slide
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+    </script>
+</body>
+</html>
