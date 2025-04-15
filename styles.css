@@ -1,3 +1,4 @@
+/* Reset + Base */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -6,6 +7,7 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     background-color: #0c3b2e;
     color: white;
@@ -29,7 +31,6 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* Active Link Styling */
 header nav ul li a.active {
     font-weight: bold;
     text-decoration: underline;
@@ -96,7 +97,7 @@ header nav ul li a:hover {
     border: 5px solid white;
 }
 
-/* Slideshow Styles */
+/* Slideshow Section */
 .art-slideshow {
     padding: 50px 20px;
     text-align: center;
@@ -105,27 +106,34 @@ header nav ul li a:hover {
 
 .slideshow-container {
     position: relative;
-    width: 500px;   /* Set the fixed width */
-    height: 500px;  /* Set the fixed height */
+    width: 500px;
+    height: 500px;
     margin: auto;
-    overflow: hidden; /* Hide any overflowed content */
+    overflow: hidden;
 }
 
+/* Updated Slideshow Fade Logic */
 .mySlides {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 0;
+}
+
+.mySlides.active {
+    opacity: 1;
+    z-index: 1;
 }
 
 .mySlides img {
-    width: 100%;   /* Ensure the image fills the width */
-    height: 100%;  /* Ensure the image fills the height */
-    object-fit: cover; /* Makes sure the image fills the box without distortion */
-    border-radius: 10px; /* Optional, for rounded corners */
-}
-
-@media (max-width: 768px) {
-    .caption {
-        font-size: 1.2rem;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Join Us Section */
@@ -147,6 +155,7 @@ header nav ul li a:hover {
     margin: 0 auto 30px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -170,14 +179,15 @@ header nav ul li a:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 20px; /* adds spacing between stacked elements */
+        gap: 20px;
     }
-    
+
     .hero-image img {
-        width: 150px;       /* a little smaller for tighter screens */
+        width: 150px;
         height: auto;
-        margin-top: 20px;   /* creates breathing room */
+        margin-top: 20px;
     }
+
     .slideshow-container {
         width: 300px;
         height: 300px;
