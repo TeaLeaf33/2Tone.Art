@@ -6,47 +6,6 @@
     <title>2Tone Art - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="shop-styles.css">
- <style>
-        /* Make sure this is in your CSS file or inside <style> in <head> */
-        /* Slideshow Styles */
-        .art-slideshow {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #f5f5f5;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .mySlides {
-            display: none; /* Hide all slides initially */
-            width: 100%; /* Ensure the image is full width */
-            max-height: 500px; /* Optional: Set a max height */
-            margin: 0 auto;
-            border-radius: 10px;
-        }
-
-        .caption {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 1.5rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        /* Ensure images are styled */
-        .mySlides img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 <body onload="showSlides()"> <!-- Ensures the slideshow starts when the page loads -->
     <!-- Header -->
@@ -110,22 +69,21 @@
 
     <!-- JavaScript for Slideshow -->
     <script>
-        let slideIndex = 0;
+let slideIndex = -1;
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            // Hide all slides initially
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            // Increment slideIndex
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1; // Reset to first slide
-            }
-            slides[slideIndex - 1].style.display = "block"; // Show the current slide
-            setTimeout(showSlides, 5000); // Change slide every 5 seconds
-        }
+function showSlides() {
+    const slides = document.getElementsByClassName("mySlides");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add("active");
+
+    setTimeout(showSlides, 5000); // Change every 5 seconds
+}
     </script>
 </body>
 </html>
+
