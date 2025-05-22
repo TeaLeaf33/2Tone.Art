@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2Tone Art</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #caf61a, #3bd53b, #4dcbf2);
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h1, h2 {
+      font-family: 'Amatic SC', cursive;
+      letter-spacing: 1px;
+      color: #ffffff;
+      text-shadow: none;
+    }
+
+    a, p, span {
+      color: #ffffff;
+      text-shadow: none;
+    }
+
+    .glass {
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+    }
+
+    .flip-card {
+      perspective: 1000px;
+    }
+
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front, .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .flip-front {
+      background: #062b21;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+      background: #0f3c2e;
+    }
+
+    .hover-glow {
+      transition: transform 0.2s ease;
+    }
+
+    .hover-glow:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      background: transparent !important;
+    }
+
+    header {
+      background: #3699b7;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      background: #3699b7;
+      color: #ffffff;
+      text-shadow: none;
+    }
+
+    .button, .btn, .hover-glow a {
+      background-color: #22c55e;
+      color: #0f172a;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover, .btn:hover {
+      background-color: #16a34a;
+      box-shadow: none;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="w-full p-6 shadow-md fixed top-0 left-0 z-50 flex justify-between items-center">
+    <h1 class="text-3xl font-bold text-white">2Tone Art</h1>
+    <nav class="space-x-6 text-lg">
+      <a href="#home" class="text-white hover:text-green-300">Home</a>
+      <a href="#store" class="text-white hover:text-green-300">Store</a>
+      <a href="#sketchbook" class="text-white hover:text-green-300">Sketchbook</a>
+      <a href="#arcade" class="text-white hover:text-green-300">Arcade</a>
+    </nav>
+  </header>
+
+  <main class="pt-28">
+
+    <!-- Home Section (Hero) -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4">
+      <div class="glass p-10 rounded-2xl shadow-2xl max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        
+        <!-- Profile Image -->
+        <div class="flex justify-center">
+          <img src="pfp.jpg" alt="2Tone Profile Picture" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-lg">
+        </div>
+
+        <!-- Text Content -->
+        <div class="text-center md:text-left">
+          <h2 class="text-5xl font-bold mb-4">2Tone</h2>
+          <p class="text-lg">Adventurer of Land and Sea. Creator of Tiny Worlds to get lost in. I let my art whisper where the ordinary world fails. Bend the rules and use more color! This is where I express myself. It's okay to be misunderstood. It's okay to be... Uninique.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="min-h-screen flex items-center justify-center px-6 py-20">
+      <div class="max-w-4xl text-center">
+        <h2 class="text-4xl font-bold mb-6">The Store</h2>
+        <p class="mb-6">Shop merch, prints, and more. All products are rooted in creativity and the natural world.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="glass p-4 rounded-xl shadow hover-glow transition-transform duration-200">
+            <img src="the damage is real.png" alt="T-shirt" class="rounded mb-4">
+            <a href="#" class="button">Buy T-Shirt</a>
+          </div>
+          <div class="glass p-4 rounded-xl shadow hover-glow transition-transform duration-200">
+            <img src="the damage is real.png" alt="Sticker Pack" class="rounded mb-4">
+            <a href="#" class="button">Buy Stickers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sketchbook Section -->
+    <section id="sketchbook" class="min-h-screen flex items-center justify-center px-6 py-20">
+      <div class="max-w-5xl text-center">
+        <h2 class="text-4xl font-bold mb-6">The Sketchbook</h2>
+        <p class="mb-6">A peek behind the curtain—raw concepts, works-in-progress, and strange ideas from the woods.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Flip Cards -->
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front"><img src="sketch.png" alt="Sketch Front" class="w-full h-full object-cover"></div>
+              <div class="flip-back"><img src="the damage is real.png" alt="Sketch Back" class="w-full h-full object-cover"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arcade Section -->
+    <section id="arcade" class="min-h-screen flex items-center justify-center px-6 py-20">
+      <div class="max-w-4xl text-center">
+        <h2 class="text-4xl font-bold mb-6">The Arcade</h2>
+        <p class="mb-4">Play digital mini-games inspired by our art. Beat them all to uncover hidden secrets and rewards.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="glass p-4 rounded-xl shadow hover-glow transition-transform duration-200">
+            <img src="the damage is real.png" alt="Game 1" class="rounded mb-2">
+            <p class="mb-2">Snail Finder</p>
+            <a href="https://snail-finder.vercel.app/" class="button">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white text-center py-4">
+    <p>© 2025 2Tone Art. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
