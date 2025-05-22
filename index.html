@@ -40,35 +40,7 @@
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
     }
 
-    .flip-card { perspective: 1000px; }
-
-    .flip-inner {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 100%;
-      transition: transform 0.8s ease;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card:hover .flip-inner { transform: rotateY(180deg); }
-
-    .flip-front, .flip-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .flip-front { background: #062b21; }
-
-    .flip-back {
-      transform: rotateY(180deg);
-      background: #0f3c2e;
-    }
+    
 
     .hover-glow { transition: transform 0.2s ease; }
 
@@ -90,7 +62,7 @@
 
     .button, .btn, .hover-glow a {
       background-color: #22c55e;
-      color: #0f172a;
+      color: white;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
       font-weight: bold;
@@ -102,7 +74,7 @@
 
     .button:hover, .btn:hover {
       background-color: #16a34a;
-      color: #fff;
+      color: black;
     }
   </style>
 </head>
@@ -124,18 +96,16 @@
     <!-- Nav Links -->
     <nav id="nav-menu" class="hidden md:flex space-x-6 text-lg">
       <a href="#home" class="text-white hover:text-green-300">Home</a>
-      <a href="#store" class="text-white hover:text-green-300">Store</a>
-      <a href="#sketchbook" class="text-white hover:text-green-300">Sketchbook</a>
-      <a href="#arcade" class="text-white hover:text-green-300">Arcade</a>
+      <a href="#store" class="text-white hover:text-green-300">MarketPlace</a>
+      <a href="#arcade" class="text-white hover:text-green-300">Mini Arcade</a>
     </nav>
   </header>
 
   <!-- Mobile Nav -->
   <div id="mobile-menu" class="md:hidden hidden flex-col items-center bg-[#3699b7] text-white space-y-4 py-4 fixed top-20 left-0 right-0 z-40">
     <a href="#home" class="hover:text-green-300">Home</a>
-    <a href="#store" class="hover:text-green-300">Store</a>
-    <a href="#sketchbook" class="hover:text-green-300">Sketchbook</a>
-    <a href="#arcade" class="hover:text-green-300">Arcade</a>
+    <a href="#store" class="hover:text-green-300">MarketPlace</a>
+    <a href="#arcade" class="hover:text-green-300">Mini Arcade</a>
   </div>
 
   <main class="pt-28">
@@ -155,32 +125,16 @@
     <!-- Store Section -->
     <section id="store" class="min-h-screen flex items-center justify-center px-6 py-20">
       <div class="max-w-4xl text-center">
-        <h2 class="text-4xl font-bold mb-6">The Store</h2>
-        <p class="mb-6">Shop merch, prints, and more. All products are rooted in creativity and the natural world.</p>
+        <h2 class="text-4xl font-bold mb-6">MarketPlace</h2>
+        <p class="mb-6">NFTs, 1 of 1s, Auctions and more...</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="glass p-4 rounded-xl shadow hover-glow transition-transform duration-200">
-            <img src="the damage is real.png" alt="T-shirt" class="rounded mb-4">
-            <a href="#" class="button">Buy T-Shirt</a>
+            <img src="#" alt="T-shirt" class="rounded mb-4">
+            <a href="https://app.manifold.xyz/br/TangSite107" class="button">Coming Soon</a>
           </div>
           <div class="glass p-4 rounded-xl shadow hover-glow transition-transform duration-200">
-            <img src="the damage is real.png" alt="Sticker Pack" class="rounded mb-4">
-            <a href="#" class="button">Buy Stickers</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sketchbook Section -->
-    <section id="sketchbook" class="min-h-screen flex items-center justify-center px-6 py-20">
-      <div class="max-w-5xl text-center">
-        <h2 class="text-4xl font-bold mb-6">The Sketchbook</h2>
-        <p class="mb-6">A peek behind the curtain—raw concepts, works-in-progress, and strange ideas from the woods.</p>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div class="flip-card">
-            <div class="flip-inner">
-              <div class="flip-front"><img src="sketch.png" alt="Sketch Front" class="w-full h-full object-cover"></div>
-              <div class="flip-back"><img src="the damage is real.png" alt="Sketch Back" class="w-full h-full object-cover"></div>
-            </div>
+            <img src="Eye.png" alt="Sticker Pack" class="rounded mb-4">
+            <a href="https://magiceden.us/mint-terminal/monad-testnet/0xb02ae8e84866d48fa940cac98e70bcae1635b5fe" class="button">Mint Now</a>
           </div>
         </div>
       </div>
@@ -189,8 +143,8 @@
     <!-- Arcade Section -->
     <section id="arcade" class="min-h-screen flex items-center justify-center px-6 py-20">
       <div class="max-w-4xl text-center">
-        <h2 class="text-4xl font-bold mb-6">The Arcade</h2>
-        <p class="mb-4">Play digital mini-games inspired by our art. Beat them all to uncover hidden secrets and rewards.</p>
+        <h2 class="text-4xl font-bold mb-6">Mini Arcade</h2>
+        <p class="mb-4">Play digital mini-games inspired by my art. Beat them all to uncover hidden secrets and rewards.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="glass p-4 rounded-xl shadow hover-glow transition-transform duration-200">
             <img src="the damage is real.png" alt="Game 1" class="rounded mb-2">
@@ -216,4 +170,5 @@
   </script>
 </body>
 </html>
+
 
