@@ -217,6 +217,13 @@
       }
       showingFirst = !showingFirst;
     }, 8000); // every 8 seconds
+
+    window.addEventListener('load', () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0); // Ensures it runs after load/render
+});
+
   </script>
 </body>
 </html>
